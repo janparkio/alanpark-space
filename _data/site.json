@@ -1,11 +1,11 @@
 {
-  "name": "Spacebook",
-  "subtitle": "Fast and simple documentation to explain almost anything",
-  "description": "A simple document generator based on Eleventy, Tailwind 2.0, and Alpine.js",
+  "name": "Alan Park",
+  "subtitle": "Fast and simple way to grow your business",
+  "description": "Everything you need to know to start.",
   "emoji": "💥",
-  "footer": "Made with ❤️️ by Electric Citizen",
-  "url": "https://spacebook.app",
-  "githubUrl": "https://github.com/broeker/spacebook",
+  "footer": "Made with ❤️️  by @janparkio",
+  "url": "https://alanpark.org",
+  "githubUrl": "/",
   "githubBranch": "main",
   "enableSearch": true,
   "enableDarkMode": true,
@@ -13,7 +13,7 @@
   "enableGithubLink": true,
   "enableContact": false,
   "enableTOC": false,
-  "enableNetlifyCMS": false,
+  "enableNetlifyCMS": true,
   "enableComments": false,
   "enableEncryption": false
 }
