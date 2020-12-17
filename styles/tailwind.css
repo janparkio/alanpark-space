@@ -4,15 +4,20 @@
 @layer base {
 
   .prose a {
-    @apply dark:text-gray-400
+    @apply dark:text-purple-500
   }
 
   .prose a:hover {
-    @apply dark:text-gray-500
+    @apply dark:text-purple-600
   }
 
+  a.btn {
+    @apply px-4 py-2 my-8 text-white no-underline bg-purple-500 rounded dark:text-white dark:hover:text-white hover:bg-purple-700
+  }
+
+  
   .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 .prose hr, .prose strong {
-    @apply dark:text-gray-400
+    @apply dark:text-purple-500
   }
 
   .prose h2, .prose h3, .prose h4 {
@@ -28,7 +33,7 @@
   }
 
   blockquote {
-    @apply rounded-lg p-4 bg-gray-100 dark:bg-gray-500 border-gray-200 border-l-8 dark:border-gray-700;
+    @apply p-4 bg-gray-100 border-l-8 border-gray-200 rounded-lg dark:bg-gray-500 dark:border-gray-700;
   }
 
   .callout {
@@ -53,18 +58,18 @@
     @apply dark:text-gray-200 dark:bg-pink-900;
   }
 
-  .callout-green {
-    @apply px-8 py-4 mb-4 rounded-lg bg-green-50;
+  .callout-purple {
+    @apply px-8 py-4 mb-4 rounded-lg bg-purple-50;
   }
-  .callout-green, .callout-green strong, .callout-green em {
-    @apply dark:text-gray-200 dark:bg-green-900;
+  .callout-purple, .callout-purple strong, .callout-purple em {
+    @apply dark:text-gray-200 dark:bg-purple-900;
   }
 
   .warning {
-    @apply px-8 py-4 mb-4 rounded-lg bg-red-800 text-gray-50;
+    @apply px-8 py-4 mb-4 bg-red-800 rounded-lg text-gray-50;
   }
   .warning, .warning strong, .warning em {
-    @apply text-gray-50 dark:bg-red-900  dark:text-gray-200;
+    @apply text-gray-50 dark:bg-red-900 dark:text-gray-200;
   }
 
   nav.toc ol li {
@@ -102,7 +107,7 @@
   }
 
   nav ul li a {
-    @apply mb-1 pt-2 pr-4 pb-1 pl-2 w-full block text-gray-500 dark:text-gray-500;
+    @apply block w-full pt-2 pb-1 pl-2 pr-4 mb-1 text-gray-500 dark:text-gray-500;
   }
 
   nav ul li a:hover {
@@ -126,7 +131,7 @@
   }
 
   a.button {
-    @apply bg-green-500 text-gray-50 px-6 py-2
+    @apply bg-purple-500 text-gray-50 px-6 py-2
   }
 
   .text-align-center {

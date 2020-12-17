@@ -23,9 +23,9 @@ module.exports = {
           css: {
             maxWidth: '100%',
             a: {
-              color: '#1D4ED8',
+              color: '#8B5CF6',
               '&:hover': {
-                color: '#1E3A8A',
+                color: '#7C3AED',
               },
             },
             '.prose a.edit, .tag a': {
@@ -45,7 +45,7 @@ module.exports = {
             },
           },
         },
-      }
+      },
     },
   }, 
   variants: {},

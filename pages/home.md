@@ -13,8 +13,8 @@ eleventyNavigation:
 
 You can launch your own spacebook and deploy it to the cloud on Netlify with the click of a button. You'll need an existing [Github account](https://github.com/) and a [Netlify account](https://www.netlify.com/) (which you can create during this process if you wish): 
 
-<div class="flex width-full my-4 justify-center">
-<a class="bg-green-700 hover:bg-blue-600 text-white no-underline my-8 px-4 py-2 rounded" href="https://app.netlify.com/start/deploy?repository=https://github.com/broeker/spacebook">Deploy to Netlify!</a>
+<div class="flex justify-center my-4 width-full">
+<a class="btn" href="https://app.netlify.com/start/deploy?repository=https://github.com/broeker/spacebook">Deploy to Netlify!</a>
 </div>
 
 This process will automatically copy the spacebook repository to your own personal Github account. Once complete, your new spacebook will be automatically deployed on Netlify and ready for customization. 👍
@@ -61,7 +61,7 @@ Anybody who is willing to learn a few simple things can create as many spacebook
 
 ## Install spacebook
 
-In theory, you can launch a spacebook without ever downloading the code or running your site locally. Just click that big green button and edit your files directly on Github! (The Github UI is fairly mobile friendly, and it is entirely possible to launch and manage a spacebook entirely via your phone :))  
+In theory, you can launch a spacebook without ever downloading the code or running your site locally. Just click that big primary button and edit your files directly on Github! (The Github UI is fairly mobile friendly, and it is entirely possible to launch and manage a spacebook entirely via your phone :))  
 
 But if you want to customize your codebase or write your Markdown files in a local editor, you'll want to download and install your site locally.
 
