@@ -46,6 +46,14 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 100 }
           - { label: "Parent", name: "parent", widget: "string" }
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Button Label", name: "button_label", widget: "string" }
+          - { label: "Button Url", name: "button_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
   - label: "Globals"
     name: "globals"
