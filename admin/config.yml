@@ -60,8 +60,10 @@ collections:
           - {label: "Site emoji", name: "emoji", widget: "string", required: false}
           - {label: "Site footer", name: "footer", widget: "string", required: false}
           - {label: "Site Url", name: "url", widget: "string"}
-          - {label: "Github Url", name: "githubUrl", widget: "string"}
-          - {label: "Github branch", name: "githubBranch", widget: "string"}
+          - {label: "Twitter Username", name: "twitterUser", widget: "string"}
+          - {label: "Linkedin Username", name: "linkedinUser", widget: "string"}
+          - {label: "Facebook Username", name: "facebookUser", widget: "string"}
+          - {label: "Instagram Username", name: "instagramUser", widget: "string"}
           - {label: "Meta description", name: "description", widget: "string"}
           - {label: "Enable edit button", name: "enableEditButton", widget: "boolean"}
           - {label: "Enable Netlify CMS", name: "enableNetlifyCMS", widget: "boolean", default: false}
@@ -71,12 +73,4 @@ collections:
           - {label: "Enable contact form", name: "enableContact", widget: "boolean"}
           - {label: "Enable commments", name: "enableComments", widget: "boolean", default: false}
           - {label: "Enable encryption", name: "enableEncryption", widget: "boolean", default: false}
-      - label: "Social Media"
-        name: "social_media"
-        delete: false
-        file: "_data/site.json"
-        fields:
-          - {label: "Twitter Username", name: "twitterUser", widget: "string"}
-          - {label: "Linkedin Username", name: "linkedinUser", widget: "string"}
-          - {label: "Facebook Username", name: "facebookUser", widget: "string"}
-          - {label: "Instagram Username", name: "instagramUser", widget: "string"}
+          
