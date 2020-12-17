@@ -3,48 +3,66 @@ layout: layouts/base.njk
 section: page
 ---
 <div class="flex justify-end mt-4 mr-1">
-    <div class="inline-block w-auto pt-1 pb-1 pl-3 mr-2 text-xs text-gray-500 rounded ">Updated <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time></div>
- </div>
- 
+    <div class="inline-block w-auto pt-1 pb-1 pl-3 mr-2 text-xs text-gray-500 rounded ">Updated <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
+    </div>
+</div>
+
 <div class="flex justify-center w-full">
     <div class="w-full max-w-5xl px-6 mt-4 md:px-6 lg:px-8 xl:px-12">
         <div class="flex justify-between wrapper">
-            {% if site.enableTOC and toc %} 
-            <div class="flex flex-col pr-0 prose main xl:pr-64 sm:prose lg:prose-lg xl:prose-md">
-            {% else %}
-             <div class="flex flex-col pr-0 prose main sm:prose lg:prose-lg xl:prose-md">
-            {% endif %}    
-                <article>
-                    <h1 class="dark:text-purple-500">{{ title }}</h1>
-                    <div class="adjust dark:text-gray-400">
-                    {{ layoutContent | safe }}
-                    {% if (site.enableComments) and (comments !== 0) %}
-                    <!-- Paste your comment code here! -->
-                    {% endif %}
-                     <ul class="flex flex-row-reverse flex-wrap justify-between pt-4 pl-0 mt-8 mb-8 ml-0 list-none footer-nav">
-                     {%- set nextPage = collections.menuItems | getNextCollectionItem(page) %}
-                     {%- if nextPage %}<li class="pl-0 ml-0"><a class="font-semibold text-gray-500 hover:text-gray-900" href="{{ nextPage.url | url }}">{% if nextPage.data.eleventyNavigation.title %}{{  nextPage.data.eleventyNavigation.title }}{% else %}{{  nextPage.data.eleventyNavigation.key }}{% endif %}</a> <svg height="24" fill="none" viewBox="0 0 24 24" stroke="#6B7280" class="flex-shrink-0 inline ml-1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></li>{% endif %}
-                     {%- set previousPage = collections.menuItems | getPreviousCollectionItem(page) %}
-                     {%- if previousPage %}<li class="pl-0 ml-0"><svg height="24" fill="none" viewBox="0 0 24 24" stroke="#6B7280" class="flex-shrink-0 inline mr-1 transform rotate-180">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                     <a class="font-semibold text-gray-500 hover:text-gray-900" href="{{ previousPage.url | url }}">
-                    {% if previousPage.data.eleventyNavigation.title %}{{  previousPage.data.eleventyNavigation.title }}{% else %}{{  previousPage.data.eleventyNavigation.key }}{% endif %} </a> </li>{% endif %}
-                    </ul>
-                    </div>
-                </article>
-               
-            </div>    
-            
             {% if site.enableTOC and toc %}
-            <div class="sticky right-0 hidden w-56 h-full mt-12 -ml-56 font-semibold text-gray-500 xl:block sidebar top-48">
-                <small>ON THIS PAGE</small><br />
-                    <aside class="font-normal">
-                    {{ content | toc | safe }}
-                    </aside>
+                <div class="flex flex-col pr-0 prose main xl:pr-64 sm:prose lg:prose-lg xl:prose-md">
+                {% else %}
+                    <div class="flex flex-col pr-0 prose main sm:prose lg:prose-lg xl:prose-md">
+                    {% endif %}
+                    <article>
+                        <h1 class="dark:text-purple-500">{{ title }}</h1>
+                        <div class="adjust dark:text-gray-400">
+                            {{ layoutContent | safe }}
+                            {% if (site.enableComments) and (comments !== 0) %}
+                                <!-- Paste your comment code here! -->
+                            {% endif %}
+                            <ul class="flex flex-row-reverse flex-wrap justify-between pt-4 pl-0 mt-8 mb-8 ml-0 list-none footer-nav">
+                                {%- set nextPage = collections.menuItems | getNextCollectionItem(page) %}
+                                {%- if nextPage %}
+                                    <li class="pl-0 ml-0">
+                                        <a class="font-semibold text-gray-500 hover:text-gray-900" href="{{ nextPage.url | url }}">
+                                            {% if nextPage.data.eleventyNavigation.title %}{{  nextPage.data.eleventyNavigation.title }}
+                                            {% else %}{{  nextPage.data.eleventyNavigation.key }}
+                                            {% endif %}
+                                        </a>
+                                        <svg height="24" fill="none" viewBox="0 0 24 24" stroke="#6B7280" class="flex-shrink-0 inline ml-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </li>
+                                {% endif %}
+                                {%- set previousPage = collections.menuItems | getPreviousCollectionItem(page) %}
+                                {%- if previousPage %}
+                                    <li class="pl-0 ml-0">
+                                        <svg height="24" fill="none" viewBox="0 0 24 24" stroke="#6B7280" class="flex-shrink-0 inline mr-1 transform rotate-180">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                        <a class="font-semibold text-gray-500 hover:text-gray-900" href="{{ previousPage.url | url }}">
+                                            {% if previousPage.data.eleventyNavigation.title %}{{  previousPage.data.eleventyNavigation.title }}
+                                            {% else %}{{  previousPage.data.eleventyNavigation.key }}
+                                            {% endif %}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                {% if site.enableTOC and toc %}
+                    <div class="sticky right-0 hidden w-56 h-full mt-12 -ml-56 font-semibold text-gray-500 xl:block sidebar top-48">
+                        <small>ON THIS PAGE</small><br/>
+                        <aside class="font-normal">
+                            {{ content | toc | safe }}
+                        </aside>
+                    </div>
+                {% endif %}
             </div>
-            {% endif %}
         </div>
     </div>
-</div>
-   
-

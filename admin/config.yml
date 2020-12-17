@@ -70,4 +70,13 @@ collections:
           - {label: "Enable search", name: "enableSearch", widget: "boolean"}
           - {label: "Enable contact form", name: "enableContact", widget: "boolean"}
           - {label: "Enable commments", name: "enableComments", widget: "boolean", default: false}
-          - {label: "Enable encryption", name: "enableEncryption", widget: "boolean", default: false}
+          - {label: "Enable encryption", name: "enableEncryption", widget: "boolean", , default: false}
+      - label: "Social Media"
+        name: "social_media"
+        delete: false
+        file: "_data/site.json"
+        fields:
+          - {label: "Twitter Username", name: "twitterUser", widget: "string"}
+          - {label: "Linkedin Username", name: "linkedinUser", widget: "string"}
+          - {label: "Facebook Username", name: "facebookUser", widget: "string"}
+          - {label: "Instagram Username", name: "instagramUser", widget: "string"}
